@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="OpenBox 3">
+		<menu id="client-list-menu"/>
+		<item label="Reconfigure"> <action name="Reconfigure"/> </item>
+		<separator/>
+		<item label="Exit"> <action name="Exit"/> </item>
+	</menu>
+</openbox_menu>
