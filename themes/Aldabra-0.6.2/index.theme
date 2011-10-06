@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=Aldabra
+Type=X-GNOME-Metatheme
+Encoding=UTF-8
+GtkTheme=Adwaita
+MetacityTheme=Adwaita
+IconTheme=gnome
+CursorTheme=Adwaita
+CursorSize=24

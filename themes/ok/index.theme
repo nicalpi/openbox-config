@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=ok
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=Inverted
+MetacityTheme=Ambiance
+IconTheme=gnome-brave
+GtkColorScheme=base_color:#ffffff,fg_color:#000000,tooltip_fg_color:#000000,selected_bg_color:#716968,selected_fg_color:#ffffff,text_color:#000000,bg_color:#ede9e3,tooltip_bg_color:#FFFFBF
+CursorTheme=default
+CursorSize=18
+BackgroundImage=/home/nicolas/Pictures/WALLPAPERS/cc-wallpaper-desktop.png

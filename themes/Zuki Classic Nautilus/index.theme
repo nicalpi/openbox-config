@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Zuki Classic Nautilus
+Type=X-GNOME-Metatheme
+Comment=Zuki Theme
+
+[X-GNOME-Metatheme]
+GtkTheme=Zuki Classic Nautilus
+MetacityTheme=Zuki Classic Nautilus
+IconTheme=elementary-monochrome
+CursorTheme=default

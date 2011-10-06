@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Zuki Dark
+Type=X-GNOME-Metatheme
+Comment=Zuki Theme
+
+[X-GNOME-Metatheme]
+GtkTheme=Zuki Dark
+MetacityTheme=Zuki Dark
+IconTheme=ubuntu-mono-dark
+CursorTheme=default

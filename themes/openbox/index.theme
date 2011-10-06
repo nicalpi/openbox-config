@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=openbox
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=Clearlooks
+MetacityTheme=Ambiance
+IconTheme=Faenza-Darker
+GtkColorScheme=base_color:#ffffff,fg_color:#000000,tooltip_fg_color:#000000,selected_bg_color:#86ABD9,selected_fg_color:#ffffff,text_color:#1A1A1A,bg_color:#EDECEB,tooltip_bg_color:#F5F5B5
+CursorTheme=DMZ-White
+CursorSize=18
+ButtonLayout=close,minimize,maximize:

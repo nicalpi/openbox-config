@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=cool
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=MurrinaFancyCandy
+MetacityTheme=Inverted
+IconTheme=gnome-brave
+CursorTheme=default
+CursorSize=18
+NotificationTheme=standard

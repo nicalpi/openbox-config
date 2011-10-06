@@ -1,0 +1,63 @@
+
+style "elementary-panel" = "murrine-thin"
+{
+
+	#bg_pixmap[NORMAL]	= "/Panel/panel.png" # Disable for normal panel backgrounds.
+
+	fg[PRELIGHT]				= "#ffffff"
+	bg[ACTIVE]				= shade (1.0, "#5165E1")
+	bg[SELECTED]				= shade (1.0, "#5165E1")
+	bg[PRELIGHT]				= shade (1.0, "#5165E1")
+
+	engine "murrine" {
+		roundness			= 0
+		highlight_shade     		= 1.0 
+		lightborder_shade   		= 1.0
+		gradient_shades     		= {1.18,1.0,1.0,0.85}
+		contrast			= 1.05
+		border_colors			= { "#5165E1", "#5165E1" }
+		border_shades 			= {1.2, 1.1}
+		textstyle			= 1
+		arrowstyle			= 0
+	}
+}
+
+style "elementary-panel-text"
+{
+	fg[NORMAL]	= "#4D4D4D"
+	fg[PRELIGHT]	= "#ffffff"
+	fg[ACTIVE]	= "#ffffff"
+	text[NORMAL]	= "#4D4D4D"
+	text[PRELIGHT]	= "#ffffff"
+	text[ACTIVE]	= "#ffffff"
+}
+
+style "elementary-panel-handle" 
+{
+	engine "pixmap"
+	{    
+		image
+		{
+			function 	= HANDLE
+		}
+	}    
+}
+
+class "PanelApp*"				style "elementary-panel"
+class "PanelToplevel*"				style "elementary-panel"
+class "*Xfce*Panel*"				style "elementary-panel"
+
+widget "*fast-user-switch*"			style "elementary-panel"
+widget "PanelToplevel*PanelAppletFrame"		style "elementary-panel"
+widget "PanelToplevel*PanelMenuBar"		style "elementary-panel"
+widget "PanelToplevel*PanelWidget*"		style "elementary-panel"
+widget "*Xfce*Panel*"				style "elementary-panel"
+
+widget_class "BonoboPlug*PanelApplet*"		style "elementary-panel"
+widget_class "*tray*"				style "elementary-panel"
+
+# Make sure panel text color doesn't change
+widget "*.clock-applet-button.*"		style "elementary-panel-text"
+
+# Hide ugly handles and arrows
+class "PanelAppletFrame" 			style:highest "elementary-panel-handle"

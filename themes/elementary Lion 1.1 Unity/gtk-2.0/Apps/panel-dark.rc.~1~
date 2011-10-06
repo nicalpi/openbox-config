@@ -1,0 +1,104 @@
+
+style "elementary-panel"
+{
+	xthickness		= 1
+	ythickness		= 0
+
+	fg[NORMAL]				= "#fff"
+	bg[NORMAL]				= "#000"
+	bg[ACTIVE]				= "#000"
+	bg[SELECTED]				= "#000"
+	bg[PRELIGHT]				= "#000"
+
+}
+
+style "elementary-panel-handle" 
+{
+    engine "pixmap"
+    {    
+        image
+        {
+		function 			= HANDLE
+        }    
+    }
+}
+
+style "murrine-menu"
+{
+	base[NORMAL]				= "#000"
+	base[ACTIVE]				= "#000"
+}
+
+style "murrine-menu-calendar" = "murrine-thin"
+{
+	text[INSENSITIVE]			= "#666666"
+	text[NORMAL]				= "#ffffff"
+	base[NORMAL]				= "#3B3B3B"
+	base[ACTIVE]				= "#555753"
+
+	engine "murrine"
+	{
+		roundness			= 1
+	}
+}
+
+style "murrine-menu-entry" = "murrine-thin"
+{
+
+	ythickness				= 3
+
+	base[NORMAL]				= "#000"
+	base[ACTIVE]				= "#000"
+
+	engine "murrine"
+	{
+		roundness			= 3
+	}
+}
+
+style "murrine-menu-item" = "murrine-wider-dark"
+{
+
+	base[NORMAL]				= "#000"
+	base[ACTIVE]				= "#000"
+
+	engine "murrine"
+	{
+		roundness			= 0
+		lightborderstyle		= 1
+		contrast			= 1.5
+	}
+}
+
+class "PanelApp*"				style "elementary-panel"
+class "PanelToplevel*"				style "elementary-panel"
+class "*Xfce*Panel*"				style "elementary-panel"
+
+widget "*fast-user-switch*"			style "elementary-panel"
+widget "PanelToplevel*PanelAppletFrame"		style "elementary-panel"
+widget "PanelToplevel*PanelMenuBar"		style "elementary-panel"
+widget "PanelToplevel*PanelWidget*"		style "elementary-panel"
+widget "*CPUFreq*Applet*"			style "elementary-panel"
+widget "*Xfce*Panel*"				style "elementary-panel"
+
+widget_class "BonoboPlug*PanelApplet*"		style "elementary-panel"
+widget_class "*tray*"				style "elementary-panel"
+
+# Make sure panel text color doesn't change
+widget_class "*Panel*MenuBar*"			style "murrine-dark"
+widget_class "*Panel*<GtkMenuBar>*"		style "murrine-dark"
+widget "*.clock-applet-button.*"		style "murrine-dark"
+widget "*PanelApplet*"				style "murrine-dark"
+
+# Hide ugly handle
+class "PanelAppletFrame" 			style:highest "elementary-panel-handle"
+
+widget_class "*<GtkMenu>*"              	style "murrine-thin-dark"
+widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
+widget_class "*<GtkMenuItem>.*.<GtkCalendar>"	style "murrine-menu-calendar"
+widget_class "*<GtkMenuItem>.*.<GtkEntry>"	style "murrine-menu-entry"
+widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
+widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
+widget "*.gtk-combobox-popup-menu.*"   		style "murrine-dark"
+
+

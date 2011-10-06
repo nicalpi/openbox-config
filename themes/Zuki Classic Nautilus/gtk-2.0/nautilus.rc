@@ -1,0 +1,195 @@
+style "nautilus-window-base"
+{
+	bg[NORMAL] = @bg_color
+}
+
+style "nautilus-sidebar" {
+	font_name                                 = "Regular"
+
+	GtkTreeView::odd_row_color                = "#e2e2e2"
+	GtkTreeView::even_row_color               = "#e2e2e2"
+
+	# these make the padding from left window edge a little more sane
+	GtkTreeView::vertical_separator           = 4
+	GtkTreeView::horizontal_separator         = 15
+	GtkTreeView::indent-expanders             = 1 # 1 means TRUE
+	GtkTreeView::expander-size                = 8
+	GtkExpander::expander_spacing             = 16
+	GtkButton::image_spacing                  = 4
+
+	xthickness                                = 0
+	ythickness                                = 1
+}
+
+style "nautilus-sidebar-title"
+{
+	xthickness	= 0
+	ythickness	= 0
+
+	fg[NORMAL]      = @fg_color
+	fg[PRELIGHT]    = @fg_color
+	fg[ACTIVE]      = @fg_color
+
+	bg[NORMAL]	= "#e2e2e2"
+	bg[PRELIGHT]    = "#e2e2e2"
+	bg[ACTIVE]      = "#e2e2e2"
+
+	font_name       = "Bold"
+
+	GtkExpander	::expander-spacing	= 0
+	GtkExpander	::expander-size		= 0
+	GtkArrow	::arrow-scaling		= 0.1 # allowed: 0.1 ~ 1.0 (0.6 is an approximation to get 9 by 9 pixels arrow)
+	GtkButton	::image-spacing		= 0
+	GtkButton	::inner-border		= {0, 0, 0, 0}
+	GtkButton	::child-displacement-x	= 0
+	GtkButton	::child-displacement-y	= 0
+	GtkButton	::default-border	= { 0, 0, 0, 0 }
+}
+
+style "nautilus-view"
+{
+	xthickness		= 0
+	ythickness		= 1
+}
+
+style "nautilus-handle"
+{
+	GtkPaned::handle-size = 1
+	
+	engine "pixmap"
+	{
+		image # for the thin gray line separating the sidepane and viewpane
+		{
+			function	= HANDLE
+			recolorable	= TRUE
+			file		= "Handles/handle-nautilus.png"
+			stretch		= TRUE
+			border 		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
+style "smaller-text"
+{
+}
+
+style "handle"
+{
+}
+
+### Breadcrumbs ###
+
+style "nautilus-breadcrumbs"
+{
+	xthickness = 3
+	ythickness = 0
+	
+	GtkButton::child-displacement-y		= 0
+	GtkButton::inner-border				= { 0, 8, 0, 0}
+
+	fg[PRELIGHT]    = shade (0.8, @selected_bg_color)
+
+	engine "pixmap"
+	{	
+		image
+		{
+			function        	= BOX
+			shadow				= OUT
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "Breadcrumbs/breadcrumb_prelight.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}		
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			shadow				= IN
+			state				= PRELIGHT
+			file				= "Breadcrumbs/breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	  
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= NORMAL
+			file				= "Breadcrumbs/breadcrumb_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "Breadcrumbs/breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= ACTIVE
+			file				= "Breadcrumbs/breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}  
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= INSENSITIVE
+			file				= "Breadcrumbs/breadcrumb_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		} 
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= SELECTED
+			file				= "Breadcrumbs/breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	}
+}
+
+############################################
+# NAUTILUS
+# Order of assignment is important
+#############################################
+
+widget_class "*NautilusSidePane.*"                 style "nautilus-sidebar"
+widget_class "*Nautilus*Places*Sidebar*"           style "nautilus-sidebar"
+widget_class "*Nautilus*Side*.GtkWidget"           style "nautilus-sidebar"
+widget_class "*Nautilus*Side*Title*"               style "nautilus-sidebar-title"		
+
+widget_class "*Nautilus*Window*"                   style "nautilus-window-base"
+widget_class "*Nautilus*Menu*"                     style "murrine-menu"
+widget_class "*Nautilus*MenuBar*"                  style "murrine-menubar"
+widget_class "*Nautilus*Toolbar*"                  style "murrine-toolbar"
+widget_class "*Nautilus*Toolbar*Button"            style "murrine-button"
+widget "*Nautilus*Splitter"                        style "nautilus-handle"
+widget_class "*Nautilus*View*"                     style "nautilus-view"
+widget_class "*Nautilus*Notebook"                  style "murrine-notebook"
+
+widget_class "*Nautilus*<GtkTreeView>.<GtkButton>" style "murrine-treeview-header"
+widget_class "*Nautilus*<GtkCTree>.<GtkButton>"    style "murrine-treeview-header"
+widget_class "*Nautilus*<GtkList>.<GtkButton>"     style "murrine-treeview-header"
+widget_class "*Nautilus*<GtkCList>.<GtkButton>"    style "murrine-treeview-header"
+
+widget_class "*NautilusPathBar.*ToggleButton"      style "nautilus-breadcrumbs"
+
+#widget "*.nautilus-extra-view-widget*"            style:highest "murrine-dark"

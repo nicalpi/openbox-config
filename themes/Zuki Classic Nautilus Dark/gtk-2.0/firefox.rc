@@ -1,0 +1,43 @@
+# ==============================================================================
+# FIREFOX SPECIFIC SETTINGS
+# ==============================================================================
+
+style	"ff-statusbar"
+{
+	xthickness	= 4
+	ythickness	= 3
+}
+
+style "ff-tool" = "menubar"
+{
+	GtkToolbar:: shadow-type = GTK_SHADOW_NONE
+}
+
+widget	"MozillaGtkWidget*Toolbar*"		style	"ff-tool"
+widget	"MozillaGtkWidget*Statusbar*"	style	"ff-statusbar"
+
+
+# ------------------------------------------------------------------------------
+# Some Firefox (3.0/3.5) GTK widgets hierarchy (maybe useful for someone)
+# ------------------------------------------------------------------------------
+
+# Top toolbars (and maybe others)
+#widget	"MozillaGtkWidget.GtkFixed.GtkHandleBox.GtkToolbar"	style	"theme-dark-toolbar"
+
+# Findbar entry, gecko (all html) entry
+#widget	"MozillaGtkWidget.GtkFixed.GtkEntry"	style	"theme-dark-entry"
+
+# ALL buttons
+#widget	"MozillaGtkWidget.GtkFixed.GtkButton"	style	"theme-dark-button"
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=hme
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=Inverted
+MetacityTheme=Ambiance
+IconTheme=ubuntu-mono-light
+GtkColorScheme=base_color:#ffffff,fg_color:#000000,tooltip_fg_color:#000000,selected_bg_color:#716968,selected_fg_color:#ffffff,text_color:#000000,bg_color:#ede9e3,tooltip_bg_color:#FFFFBF
+CursorTheme=DMZ-White
+CursorSize=18

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=elementary_unity
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=elementary_unity
+MetacityTheme=elementary_unity
+IconTheme=elementary-mono-dark
+GtkColorScheme=bg_color_dark:#383838,text_color_dark:#FFF
+CursorTheme=DMZ-White
+CursorSize=18
+NotificationTheme=ubuntu
+ButtonLayout=close,minimize,maximize:

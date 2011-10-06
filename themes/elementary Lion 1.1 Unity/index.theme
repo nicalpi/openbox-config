@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=elementary Lion 1.1 Unity
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=elementary Lion 1.1 Unity
+MetacityTheme=elementary Lion 1.1 Unity
+IconTheme=elementary
+GtkColorScheme=purple:#8A2F4D
+CursorTheme=DMZ-Black
+CursorSize=24
+NotificationTheme=ubuntu
+ButtonLayout=close,minimize,maximize:menu
