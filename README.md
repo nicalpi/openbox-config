@@ -12,7 +12,6 @@ cp pytyle2/config.ini ~/.config/pytyle2/config.ini
 
 cp -R themes ~/.themes
 
-cp -R wallpapers ~/Pictures
 
 ## Have fun
 
